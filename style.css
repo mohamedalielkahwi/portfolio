@@ -421,4 +421,12 @@ hr{
     .container{
         justify-content: center;
     }
+    .gritting h1{
+        font-size: 20px;
+        animation: typing 2s 2s steps(30, end) forwards;
+    }
+    .gritting p{
+        font-size: 15px;
+        animation: typing 2s 4s steps(30, end) forwards;
+    }
 }
