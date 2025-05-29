@@ -5,7 +5,7 @@
     color: white;
 }
 body{
-    background: url(img/6951fc09-ad12-4564-9146-461bc8427032.png);
+    background: linear-gradient(to bottom,#35407D,#91ADCA);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
