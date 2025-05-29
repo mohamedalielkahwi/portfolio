@@ -264,9 +264,9 @@ window.addEventListener('scroll',()=>{
     }
     const scrollY = window.scrollY;
     if (scrollY > 50) {
-        scrollTop.style.left='90%';
+         scrollTop.className='activephone';
     } else {
-        scrollTop.style.left='110%';
+        scrollTop.className='';
     }  
 })
 p1.addEventListener('mouseenter',()=>{
