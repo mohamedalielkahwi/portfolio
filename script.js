@@ -212,9 +212,9 @@ function isPartiallyInView(el) {
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
-    rect.bottom > 0 &&
+    rect.bottom >= 0 &&
     rect.left >= 0 &&
-    rect.top < window.innerHeight &&
+    rect.top <= window.innerHeight &&
     rect.right <= window.innerWidth
   );
 }
