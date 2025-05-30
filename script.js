@@ -11,6 +11,7 @@ const emailSpan = document.getElementById("email-sapn");
 const cvSpan = document.getElementById("cv-sapn");
 const headerSpan = document.getElementById("header-sapn");
 const head = document.querySelector('header');
+const first = document.getElementById("header"); 
 const html = document.getElementById('html');
 const css = document.getElementById('css');
 const js = document.getElementById('js');
@@ -234,12 +235,12 @@ window.addEventListener('scroll',()=>{
             skill[i].style.transform = 'translateX(-100px)';
         }
     };
-    if (isInViewport(header)) {
+    if (isInViewport(first)) {
         home.className = 'active';
     }else{
         home.className = '';
     }
-    if (isInViewport(skills) && !isInViewport(header)) {
+    if (isInViewport(skills) && !isInViewport(first)) {
         skil.className = 'active';
     }else{
         skil.className = '';
