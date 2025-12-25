@@ -19,11 +19,17 @@ const react = document.getElementById('react');
 const php = document.getElementById('php');
 const sql = document.getElementById('sql');
 const java = document.getElementById('java');
+const mongodb = document.getElementById('mongodb');
+const flutter = document.getElementById('flutter');
+const arduino = document.getElementById('arduino');
 const c = document.getElementById('c');
 const python = document.getElementById('python');
 const git= document.getElementById('git');
 const linux = document.getElementById('linux');
+const node = document.getElementById('node');
+const mongodbSpan = document.getElementById('mongodb-span');
 const htmlSpan = document.getElementById('html-span');
+const arduinoSpan = document.getElementById('arduino-span');
 const cssSpan = document.getElementById('css-span');
 const jsSpan = document.getElementById('js-span');
 const reactSpan = document.getElementById('react-span');
@@ -32,7 +38,9 @@ const sqlSpan = document.getElementById('sql-span');
 const javaSpan = document.getElementById('java-span');
 const cSpan = document.getElementById('c-span');
 const pythonSpan = document.getElementById('python-span');
+const nodeSpan = document.getElementById('node-span');
 const gitSpan = document.getElementById('git-span');
+const flutterSpan = document.getElementById('flutter-span');
 const linuxSpan = document.getElementById('linux-span');
 const skills= document.getElementById('skills');
 const home = document.getElementById('home');
@@ -147,6 +155,22 @@ react.addEventListener('mouseleave',()=>{
     reactSpan.style.opacity = '0';
     react.style.color = 'gray';
 })
+node.addEventListener('mouseenter',()=>{
+    nodeSpan.style.opacity = '1';
+    node.style.color = '#83CD29'
+})
+node.addEventListener('mouseleave',()=>{
+    nodeSpan.style.opacity = '0';
+    node.style.color = 'gray';
+})
+mongodb.addEventListener('mouseenter',()=>{
+    mongodbSpan.style.opacity = '1';
+    mongodb.style.color = '#47A248'
+})
+mongodb.addEventListener('mouseleave',()=>{
+    mongodbSpan.style.opacity = '0';
+    mongodb.style.color = 'gray';
+})
 php.addEventListener('mouseenter',()=>{
     phpSpan.style.opacity = '1';
     php.style.color = 'purple'
@@ -154,6 +178,22 @@ php.addEventListener('mouseenter',()=>{
 php.addEventListener('mouseleave',()=>{
     phpSpan.style.opacity = '0';
     php.style.color = 'gray';
+})
+flutter.addEventListener('mouseenter',()=>{
+    flutterSpan.style.opacity = '1';
+    flutter.style.color = '#02569B'
+})
+flutter.addEventListener('mouseleave',()=>{
+    flutterSpan.style.opacity = '0';
+    flutter.style.color = 'gray';
+})
+arduino.addEventListener('mouseenter',()=>{
+    arduinoSpan.style.opacity = '1';
+    arduino.style.color = '#00979D'
+})
+arduino.addEventListener('mouseleave',()=>{
+    arduinoSpan.style.opacity = '0';
+    arduino.style.color = 'gray';
 })
 sql.addEventListener('mouseenter',()=>{
     sqlSpan.style.opacity = '1';
@@ -223,7 +263,6 @@ const skill = document.querySelectorAll('.view');
 if (isPartiallyInView(header)) {
         home.className = 'active';
     }
-
 window.addEventListener('scroll',()=>{
     for(let i=0;i<skill.length;i++ ) {
         if(isPartiallyInView(skill[i])){
