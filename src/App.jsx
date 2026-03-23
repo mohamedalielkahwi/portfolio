@@ -64,48 +64,48 @@ const SKILLS = [
   },
 ];
 
+const BASE = import.meta.env.BASE_URL; // '/portfolio/' on GitHub Pages, '/' locally
+
 const PROJECTS = [
   {
     id: "p1",
     title: "Carte",
-    img: "/project img/Carte.png",
+    img: `${BASE}project img/Carte.png`,
     url: "https://mohamedalielkahwi.github.io/Carte/",
   },
   {
     id: "p2",
     title: "Modern Sport",
-    img: "/project img/Modern-Sport.png",
+    img: `${BASE}project img/Modern-Sport.png`,
     url: "https://mohamedalielkahwi.github.io/Modern-Sport/",
   },
   {
     id: "p3",
     title: "Microsoft",
-    img: "/project img/Microsoft.png",
+    img: `${BASE}project img/Microsoft.png`,
     url: "https://mohamedalielkahwi.github.io/Microsoft/",
   },
   {
     id: "p4",
     title: "JavaScript in Action",
-    img: "/project img/JavaScript-in-Action-Visual-Code-Demo.png",
+    img: `${BASE}project img/JavaScript-in-Action-Visual-Code-Demo.png`,
     url: "https://mohamedalielkahwi.github.io/JavaScript-in-Action-Visual-Code-Demo/",
   },
   {
     id: "p5",
     title: "MFR Auto",
-    img: "/project img/MFR Auto.png",
+    img: `${BASE}project img/MFR Auto.png`,
     url: "https://mfr-auto.great-site.net/",
   },
 ];
 
 const EDUCATIONS = [
   {
-    id: "e1",
     date: "June 2023",
     title: "Bacalaureate of computer science",
     place: "houcine bouzaiene gafsa",
   },
   {
-    id: "e2",
     date: "September 2023 – present",
     title: "Embedded Systems and Internet of Things",
     place: "ISSAT Sousse",
@@ -114,37 +114,19 @@ const EDUCATIONS = [
 
 const EXPERIENCES = [
   {
-    id: "ex1",
     date: "September 2023",
     title: "Active Member at Microsoft ISSATSo Club",
     place: "ISSAT Sousse",
   },
+  { date: "August 2024", title: "Front-End Developer", place: "ISSAT Sousse" },
   {
-    id: "ex2",
-    date: "August 2024",
-    title: "Front-End Developer",
-    place: "ISSAT Sousse",
-  },
-  {
-    id: "ex3",
     date: "September 2024",
     title: "Basic Web Instructor",
     place: "Club Microsoft",
   },
+  { date: "July 2025", title: "Full-Stack Developer", place: "ISSAT Sousse" },
+  { date: "August 2025", title: "Technical Lead", place: "Club Microsoft" },
   {
-    id: "ex4",
-    date: "July 2025",
-    title: "Full-Stack Developer",
-    place: "ISSAT Sousse",
-  },
-  {
-    id: "ex5",
-    date: "August 2025",
-    title: "Technical Lead",
-    place: "Club Microsoft",
-  },
-  {
-    id: "ex6",
     date: "September 2025",
     title: "Flutter Developer",
     place: "Club Microsoft",
@@ -265,7 +247,7 @@ export default function App() {
           {/* Profile image */}
           <div className="image">
             <img
-              src="/img/Mohamed ali elkahwi(1).png"
+              src={`${BASE}img/Mohamed ali elkahwi(1).png`}
               alt="Mohamed Ali Elkahwi"
             />
           </div>
@@ -289,7 +271,7 @@ export default function App() {
         </div>
         <div className="main">
           <img
-            src="/img/—Pngtree—3d cute smiling man with_20679195.png"
+            src={`${BASE}img/—Pngtree—3d cute smiling man with_20679195.png`}
             className="view images"
             alt=""
           />
@@ -369,11 +351,11 @@ export default function App() {
         <div className="main">
           <div className="left view">
             <img
-              src="/img/431558565_1802794690166646_5762322810595027899_n.jpg"
+              src={`${BASE}img/431558565_1802794690166646_5762322810595027899_n.jpg`}
               alt=""
             />
             <div className="contact">
-              <a href="/My CV.pdf">
+              <a href={`${BASE}My CV.pdf`}>
                 <i className="fa-solid fa-file-arrow-down"></i>
               </a>
               <a href="https://www.linkedin.com/in/mohamed-ali-elkahwi-b797392a0/">
@@ -477,7 +459,12 @@ function QuickLinks() {
       href: "mailto:mohamedalielakhwi@gmail.com",
       icon: "fa-solid fa-envelope",
     },
-    { id: "cv", label: "CV", href: "/My CV.pdf", icon: "fa-solid fa-file" },
+    {
+      id: "cv",
+      label: "CV",
+      href: `${BASE}My CV.pdf`,
+      icon: "fa-solid fa-file",
+    },
     {
       id: "certificate",
       label: "Certificate",
